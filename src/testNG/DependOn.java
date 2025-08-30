@@ -7,7 +7,7 @@ public class DependOn {
 
 	@Test
 	public void m1() {
-		Assert.assertTrue(false);
+		Assert.assertTrue(true);
 	}
 
 	@Test(dependsOnMethods = { "m1" })

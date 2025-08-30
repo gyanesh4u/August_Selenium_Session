@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.HradVsSoft">
+      <class name="testNG.RetryTest">
         <methods>
-          <include name="soft"/>
-          <include name="hard"/>
+          <include name="tearDown"/>
+          <include name="openApp"/>
+          <include name="titleTest"/>
         </methods>
-      </class> <!-- testNG.HradVsSoft -->
+      </class> <!-- testNG.RetryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

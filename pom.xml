@@ -7,6 +7,35 @@
 	<artifactId>August_Selenium_Session</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.14.0</version>
+					<configuration>
+						<!-- put your configurations here -->
+					</configuration>
+				</plugin>
+				
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.5.3</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>allure.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+				<!-- Allure Maven plugin -->
+				<plugin>
+					<groupId>io.qameta.allure</groupId>
+					<artifactId>allure-maven</artifactId>
+					<version>2.12.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
 			<resource>
@@ -17,13 +46,7 @@
 			</resource>
 		</resources>
 		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
-				<configuration>
-					<release>17</release>
-				</configuration>
-			</plugin>
+		
 		</plugins>
 	</build>
 	<dependencies>
@@ -36,7 +59,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.11.0</version>
-			<scope>test</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -58,12 +81,19 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>2.0.13</version>
 		</dependency>
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.29.1</version>
+		</dependency>
 
 
 	</dependencies>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
+
 
 </project>

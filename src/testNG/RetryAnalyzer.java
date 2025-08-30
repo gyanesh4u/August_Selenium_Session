@@ -3,15 +3,13 @@ package testNG;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class RetryAnalyzer implements IRetryAnalyzer {
+public class RetryAnalyzer implements IRetryAnalyzer{
 
-	int counter = 0;
-	int retryCount = 4;
-
-	@Override
+	int counter=0;
+	int retryCount=4;
 	public boolean retry(ITestResult result) {
-		// TODO Auto-generated method stub
-		if (counter < retryCount) {
+		
+		if(counter<retryCount) {
 			counter++;
 			return true;
 		}
