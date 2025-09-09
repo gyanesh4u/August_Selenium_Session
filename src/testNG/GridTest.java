@@ -11,17 +11,15 @@ import org.testng.annotations.Test;
 public class GridTest {
 
 	
-	 @Test
-	    public void testOnGrid() throws MalformedURLException {
-	        DesiredCapabilities caps = new DesiredCapabilities();
-	        caps.setBrowserName("safari");   // or "firefox"
-
-	        WebDriver driver = new RemoteWebDriver(
-	                new URL("http://localhost:4444/wd/hub"), caps);
-
-	        driver.get("https://www.google.com");
-	        System.out.println("Title is: " + driver.getTitle());
-
-	        driver.quit();
-	    }
+	@Test
+	public void testOnGrid() throws MalformedURLException, InterruptedException {
+		DesiredCapabilities dc=new DesiredCapabilities();
+		dc.setBrowserName("safari");
+		WebDriver driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),dc);
+		driver.get("https://google.com");
+		System.out.println(driver.getTitle());
+		Thread.sleep(10000);
+		driver.quit();
+		
+		}
 }

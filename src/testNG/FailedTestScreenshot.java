@@ -33,7 +33,7 @@ public class FailedTestScreenshot {
 	@AfterMethod
 	public void tearDown(ITestResult result) {
 		
-		if(result.FAILURE==result.getStatus()) {//true
+		if(!result.isSuccess()) {//true
 			TakesScreenshot ts=(TakesScreenshot) driver;
 			File src = ts.getScreenshotAs(OutputType.FILE);
 			try {

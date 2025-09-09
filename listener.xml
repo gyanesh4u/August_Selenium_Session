@@ -3,13 +3,13 @@
 <suite name="Suite">
 
 	<listeners>
-		<listener class-name="testNG.ListenerTestNG"></listener>
+		<listener class-name="io.chaintest.testng.ChainTestListener"></listener>
 	</listeners>
 
 	<test thread-count="5" name="Test">
 		<classes>
 
-			<class name="testNG.TestListen" />
+			<class name="testNG.Chain" />
 
 		</classes>
 	</test> <!--
