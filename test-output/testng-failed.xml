@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.GetDriver">
+      <class name="testNG.Test">
         <methods>
-          <include name="openApp"/>
+          <include name="test" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- testNG.GetDriver -->
+      </class> <!-- testNG.Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

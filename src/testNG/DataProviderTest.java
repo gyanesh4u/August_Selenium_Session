@@ -15,7 +15,7 @@ public class DataProviderTest {
 	
 	WebDriver driver;
 	
-	@DataProvider(name="Login")
+	@DataProvider(name="Login Test")
 	public Object[][] getTestdata(){
 		return ExcelUtil.getTestData("Login");
 	}
@@ -28,7 +28,7 @@ public class DataProviderTest {
 	driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	
 }
-	@Test(dataProvider = "Login")
+	@Test(dataProvider = "Login Test")
 	public void loginTest(String username,String password) throws InterruptedException {
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);

@@ -14,19 +14,20 @@ public class Parameter {
 	WebDriver driver;// global method
 
 	@BeforeMethod
-	@Parameters({"browser","url"})
-	public void setUp(String browser,String url) {
-		if(browser.equals("chrome")) {
-			driver=new ChromeDriver();
-		}
-		else if(browser.equals("ff")) {
-			driver=new FirefoxDriver();
-		}
-		else if(browser.equals("safari")){
-			driver=new SafariDriver();
+	@Parameters({ "browser", "url" })
+	public void setUp(String browser, String url) {
+		System.out.println("browser name.." + browser);
+		Reporter.log("url is..." + url, true);
+		if (browser.equals("chrome")) {
+			driver = new ChromeDriver();
+		} else if (browser.equals("ff")) {
+			driver = new FirefoxDriver();
+		} else if (browser.equals("safari")) {
+			driver = new SafariDriver();
 		}
 		driver.get(url);
 	}
+
 	@Test
 	public void titleTest() {
 		System.out.println(driver.getTitle());
@@ -38,4 +39,3 @@ public class Parameter {
 		driver.quit();
 	}
 }
-

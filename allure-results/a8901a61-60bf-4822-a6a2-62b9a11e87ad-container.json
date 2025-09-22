@@ -1,0 +1,1 @@
+{"uuid":"a8901a61-60bf-4822-a6a2-62b9a11e87ad","name":"testNG.Chain.setUp","children":["54210e06-d134-416f-baad-6c3dc8ecc396"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757486397454,"stop":1757486406233}],"afters":[],"start":1757486397453,"stop":1757486406233}
