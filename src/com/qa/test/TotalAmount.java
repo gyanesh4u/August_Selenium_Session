@@ -18,18 +18,18 @@ public class TotalAmount {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		WebElement table = driver.findElement(By.xpath("(//table[@id='product'])[2]"));
 		js.executeScript("arguments[0].scrollIntoView();", table);
-		 List<WebElement> allTr = driver.findElements(By.xpath("(//table[@id='product'])[2]/child::tbody/tr"));
+		// List<WebElement> allTr = driver.findElements(By.xpath("(//table[@id='product'])[2]/child::tbody/tr"));
 		 int sum=0;
 //		 for(WebElement tr : allTr) {
 //			 System.out.println(tr.getText());
 //		 }
 		 List<WebElement> allEle = driver.findElements(By.xpath("(//table[@id='product'])[2]/child::tbody/tr/td[4]"));
 		 
-		 for(int i=0;i<allEle.size();i++) {
-			 //String amount = driver.findElement(By.xpath("(//table[@id='product'])[2]/child::tbody/tr/td[4]")).getText();
-			 String amount = allEle.get(i).getText();
-			 System.out.println(amount);
-			 sum=sum+Integer.parseInt(amount);
+		 for(int i=1;i<=allEle.size();i++) {
+			 String amount1 = driver.findElement(By.xpath("(//table[@id='product'])[2]/child::tbody/tr["+i+"]/td[4]")).getText();
+			// String amount = allEle.get(i).getText();
+			 System.out.println(amount1);
+			 sum=sum+Integer.parseInt(amount1);
 		 }
 		 System.out.println("Total Amount: "+sum);
 	}
