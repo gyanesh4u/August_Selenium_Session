@@ -20,9 +20,7 @@ public class TotalAmount {
 		js.executeScript("arguments[0].scrollIntoView();", table);
 		// List<WebElement> allTr = driver.findElements(By.xpath("(//table[@id='product'])[2]/child::tbody/tr"));
 		 int sum=0;
-//		 for(WebElement tr : allTr) {
-//			 System.out.println(tr.getText());
-//		 }
+
 		 List<WebElement> allEle = driver.findElements(By.xpath("(//table[@id='product'])[2]/child::tbody/tr/td[4]"));
 		 
 		 for(int i=1;i<=allEle.size();i++) {
