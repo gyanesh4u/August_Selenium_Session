@@ -1,0 +1,1 @@
+{"uuid":"21c944a9-2f25-47dd-942e-170abb24318b","name":"testNG.Parameter.setUp","children":["8d9d85ef-8014-4ddd-815c-bd864db1820c"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1759753743833,"stop":1759753757880}],"afters":[],"start":1759753743833,"stop":1759753757880}
